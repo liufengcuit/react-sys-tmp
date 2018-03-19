@@ -22,7 +22,7 @@ class LoginForm extends Component{
 				query.User.login(values, result => {
 					console.log(result)
 				}, error => {
-					this.props.dispatch(routerRedux.push('/dashboard'));
+					this.props.dispatch(routerRedux.push('/home'));
 					this.refreshCaptcha()
 
 				})
