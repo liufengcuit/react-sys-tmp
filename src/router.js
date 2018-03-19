@@ -1,9 +1,10 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import IndexPage from './components/Login/Login';
+import IndexPage from './routes/Login/login';
 import HomePage from './components/Count'
 import Test from './components/Test'
+import Home from './routes/Home/home'
 
 function RouterConfig({ history }) {
 	return (
@@ -13,7 +14,8 @@ function RouterConfig({ history }) {
 					<Switch>
 						<Route path="/" exact component={IndexPage} />
 						<Route path="/count" exact component={HomePage} />
-						<Route path="/Test" exact component={Test} />
+						<Route path="/test" exact component={Test} />
+						<Route path="/home" exact component={Home} />
 					</Switch>
 		      </CSSTransition>
 			</TransitionGroup>

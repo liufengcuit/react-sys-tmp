@@ -1,4 +1,11 @@
 {
+	"proxy": {
+		"/api": {
+			"target": "http://192.168.2.106:8080/",
+			"changeOrigin": true,
+			"pathRewrite": { "^/api" : "" }
+		}
+	},
 	"extraBabelPlugins": [
 		["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
 	]
